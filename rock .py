@@ -1,7 +1,4 @@
 
-# coding: utf-8
-
-# In[ ]:
 
 
 import pickle 
@@ -72,8 +69,8 @@ from keras.preprocessing import image
 # In[ ]:
 
 
-data = open('123.csv', 'r')
-eng = open('1234.csv', 'w')
+data = open('file_name.csv', 'r')
+eng = open('submit_file.csv', 'w')
 eng.write('Image_File,Class')
 eng.write('\n')
 l1 = data.readlines()
@@ -90,7 +87,7 @@ for i in l1[1:7534]:
         eng.write(',')
 
        # print()
-        img = Image.open('F:'+'\\'+'madhu'+'\\'+'Convolutional_Neural_Networks'+'\\'+'dataset'+'\\'+'Test'+'\\'+l2[0])
+        img = Image.open('F:'+'\\'+'Amrita'+'\\'+'Convolutional_Neural_Networks'+'\\'+'dataset'+'\\'+'Test'+'\\'+l2[0])
         #img = img.convert('L')
         if img.getdata().mode == "RGBA":
             img = img.convert('RGB')
@@ -112,10 +109,7 @@ for i in l1[1:7534]:
         eng.write(l2[1])
         eng.write('\n') 
     except:
-        #from IPython.display import Image
-        #x=Image('F:'+'\\'+'madhu'+'\\'+'Convolutional_Neural_Networks'+'\\'+'dataset'+'\\'+'Test'+'\\'+l2[0])
-        #display(x)
-        #coun=
+       
         print(l2[0])
         
 
