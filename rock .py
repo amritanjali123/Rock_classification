@@ -87,7 +87,7 @@ for i in l1[1:7534]:
         eng.write(',')
 
        # print()
-        img = Image.open('F:'+'\\'+'Amrita'+'\\'+'Convolutional_Neural_Networks'+'\\'+'dataset'+'\\'+'Test'+'\\'+l2[0])
+        img = Image.open( write_location +l2[0])
         #img = img.convert('L')
         if img.getdata().mode == "RGBA":
             img = img.convert('RGB')
